@@ -1,0 +1,105 @@
+/* Set the font family for the entire document */
+body {
+  font-family: "Kanit", sans-serif;
+}
+
+/* Define styles for the main content container */
+.container {
+  max-width: 700px; /* Limit container width */
+  margin: 0 auto; /* Center container horizontally */
+}
+
+/* Remove default styles for the navbar toggler */
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Center align nav items */
+.nav-item {
+  text-align: center;
+}
+
+/* Define default style for icon and label */
+.nav-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Adjust margin for label */
+.ico-label {
+  margin-left: 0.5rem; /* Add space between icon and label */
+}
+
+/* Hide label on desktop screens */
+@media only screen and (min-width: 768px) {
+  .ico-label {
+    display: none;
+  }
+}
+
+/* Adjust layout for hamburger menu */
+@media only screen and (max-width: 767px) {
+  .navbar-nav {
+    flex-direction: column; /* Align items vertically */
+  }
+
+  .nav-item {
+    margin-bottom: 1rem; /* Add space between items */
+  }
+
+  .nav-item a {
+    justify-content: flex-start; /* Align items to the left */
+  }
+
+  .ico-label {
+    display: block; /* Display label */
+    margin-left: 0.5rem; /* Add space between icon and label */
+  }
+}
+
+/* Add margin for the task container */
+.addtask-container {
+  margin-top: 35px;
+}
+
+/* Remove box shadow and border color on focus */
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+  outline: none;
+}
+
+/* Center the modal */
+.modal-warn {
+  text-align: center;
+  padding: 0 !important;
+}
+
+/* Vertically center the modal content */
+.modal-warn:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px; /* Adjust scrollbar width */
+}
+
+/* Border color for warning modal */
+.modal-content-warn {
+  border: solid 3px#ffcc00 !important;
+}
+
+/* Inline block layout for modal dialog */
+.modal-dialog-warn {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* Add margin for quote */
+.quote {
+  margin-top: 1px;
+}

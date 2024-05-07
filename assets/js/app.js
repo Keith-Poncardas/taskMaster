@@ -119,6 +119,8 @@ function addTask() {
     // Set text content for the list item, trimming to 25 characters with ellipsis
     li.textContent = trimToLengthWithEllipsis(titleContent, 25);
 
+    commentInput.classList.add('text-break');
+
     // Create remove button
     const removeBtn = document.createElement('button');
     removeBtn.className = 'btn btn-outline-danger btn-sm me-2 float-end';

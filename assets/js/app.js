@@ -191,6 +191,8 @@ document.getElementById('clearTaskBtn').addEventListener('click', function () {
     // Iterate over each child of the task list and add the animation class
     taskList.childNodes.forEach(function (child) {
       child.classList.add('animate__backOutLeft');
+      titleInput.classList.remove('is-invalid');
+      commentInput.classList.remove('is-invalid');
       // Wait for the animation to finish before removing the element
       child.addEventListener('animationend', function () {
         taskList.removeChild(child);

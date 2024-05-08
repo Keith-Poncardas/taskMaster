@@ -186,6 +186,8 @@ document.getElementById('addTaskBtn').addEventListener('click', addTask);
 document.getElementById('clearTaskBtn').addEventListener('click', function () {
   // Check if the task list is empty
   if (taskList.childElementCount === 0) {
+    titleInput.classList.remove('is-invalid');
+    commentInput.classList.remove('is-invalid');
     showToast("Task Is Empty", "Task is already cleared");
   } else {
     // Iterate over each child of the task list and add the animation class

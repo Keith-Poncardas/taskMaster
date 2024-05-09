@@ -89,7 +89,7 @@ body {
 
 /* Border color for warning modal */
 .modal-content-warn {
-  border: solid 3px#ffcc00 !important;
+  border: solid 2.5px#ffcc00 !important;
 }
 
 /* Inline block layout for modal dialog */

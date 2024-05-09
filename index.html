@@ -116,6 +116,12 @@
 
     <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer"></div>
 
+    <div id="liveAlertPlaceholder" class="alert alert-success" role="alert">
+      <strong>New Update!</strong> Theme toggle. 🎉
+      <button type="button" class="btn-close btn-sm float-end" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+
     <!-- Input group for adding a new task -->
     <div class="form-floating">
       <input type="email" class="form-control" id="titleInput" placeholder="name@example.com">
@@ -145,19 +151,23 @@
           </div>
           <div class="modal-body">
             <div class="alert alert-success" role="alert">
-              <strong>New Update!</strong> Theme toggle.
+              <strong>New Update!</strong> Theme toggle. 🎉
             </div>
-            <p style="text-align: justify;">
-              Right now, your to-do list can't be saved because our web app doesn't have
-              a database connection. This
-              only affects
-              your UI experience for this session. Sadly, any entries you make won't saved once you leave the page. I'm
-              working hard to make this functional and make your app experience better soon. Thanks for your
-              patience!
-            </p>
-            <figcaption class="blockquote-footer quote">
-              <cite title="Source Title">Keith Poncardas (Developer)</cite>
-            </figcaption>
+            <div class="alert alert-warning" role="alert">
+              <p style="text-align: justify;">
+                <strong>Hello User!</strong> This is Keith, Right now, your to-do list can't be saved
+                because our web app doesn't have
+                a database connection. This
+                only affects
+                your UI experience for this session. Sadly, any entries you make won't saved once you leave the page.
+                I'm
+                working hard to make this functional and make your app experience better soon. Thanks for your
+                patience!
+              </p>
+              <!-- <figcaption class="blockquote-footer quote">
+                <cite title="Source Title">Keith Poncardas (Developer)</cite>
+              </figcaption> -->
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-warning" data-bs-dismiss="modal">I Understand</button>
@@ -204,9 +214,6 @@
         githubIconLight.setAttribute('color', '#fff');
       }
     }
-
-    // sun #FDB813
-    // moon #89cff0
 
     const themeButton = document.getElementById('themeButton');
     themeButton.addEventListener('click', toggleTheme);

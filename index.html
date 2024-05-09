@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 
 <head>
   <meta charset="utf-8">
@@ -87,7 +87,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link facebook-icon" href="https://github.com/Keith-Poncardas" title="GitHub" target="_blank">
+            <a id="githubIcon" class="nav-link facebook-icon" href="https://github.com/Keith-Poncardas" title="GitHub"
+              target="_blank">
               <box-icon name='github' type='logo' color='#24292e'></box-icon>
               <span class="ico-label">Github</span>
             </a>
@@ -97,6 +98,12 @@
               title="YouTube" target="_blank">
               <box-icon name='youtube' type='logo' color='#c4302b'></box-icon>
               <span class="ico-label">Youtube</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="themeButton" class="nav-link youtube-icon" title="Theme" href="#">
+              <box-icon name='moon' type='solid' color='#89cff0'></box-icon>
+              <span class="ico-label">Theme</span>
             </a>
           </li>
         </ul>
@@ -169,6 +176,71 @@
 
   <!-- Boxicons JavaScript -->
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+  <!-- Toggle theme -->
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const currentTheme = body.getAttribute('data-bs-theme');
+
+      if (currentTheme === 'dark') {
+        body.setAttribute('data-bs-theme', 'light');
+        const lightIcon = document.querySelector('#themeButton box-icon');
+        const githubIconDark = document.querySelector('#githubIcon box-icon');
+        lightIcon.setAttribute('name', 'moon');
+        lightIcon.setAttribute('color', '#89cff0');
+        githubIconDark.setAttribute('name', 'github');
+        githubIconDark.setAttribute('color', '#24292e');
+      } else {
+        body.setAttribute('data-bs-theme', 'dark');
+        const darkIcon = document.querySelector('#themeButton box-icon');
+        const githubIconLight = document.querySelector('#githubIcon box-icon');
+        darkIcon.setAttribute('name', 'sun');
+        darkIcon.setAttribute('color', '#FDB813');
+        githubIconLight.setAttribute('name', 'github');
+        githubIconLight.setAttribute('color', '#fff');
+      }
+    }
+
+    // sun #FDB813
+    // moon #89cff0
+
+    const themeButton = document.getElementById('themeButton');
+    themeButton.addEventListener('click', toggleTheme);
+  </script>
+
+  <!-- Content Protection Script -->
+  <script>
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function (event) {
+      event.preventDefault();
+    });
+
+    // Disable text selection
+    document.addEventListener('selectstart', function (event) {
+      event.preventDefault();
+    });
+
+    // Disable copy/paste shortcuts
+    document.addEventListener('copy', function (event) {
+      event.preventDefault();
+    });
+    document.addEventListener('cut', function (event) {
+      event.preventDefault();
+    });
+    document.addEventListener('paste', function (event) {
+      event.preventDefault();
+    });
+
+    // Disable keyboard shortcuts to open developer tools
+    document.addEventListener('keydown', function (event) {
+      // Check if Ctrl+Shift+I, Ctrl+Shift+J (Cmd+Option+I, Cmd+Option+J on Mac) or F12 is pressed
+      if ((event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J')) ||
+        (event.key === 'F12')) {
+        event.preventDefault();
+      }
+    });
+  </script>
 
   <!-- Inline JavaScript For Modal Pop-Up -->
   <script>

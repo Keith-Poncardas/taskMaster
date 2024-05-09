@@ -152,6 +152,7 @@ function addTask() {
     // Create edit button
     const editBtn = document.createElement('button');
     editBtn.className = 'btn btn-outline-info btn-sm me-2 float-end'
+    editBtn.setAttribute('title', 'Edit');
     // Set inner HTML for edit button icon
     editBtn.innerHTML = editIconSvg;
     // Add event listener to edit button

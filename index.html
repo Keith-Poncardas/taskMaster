@@ -124,7 +124,7 @@
 
     <!-- Input group for adding a new task -->
     <div class="form-floating">
-      <input type="email" class="form-control" id="titleInput" placeholder="name@example.com">
+      <input type="text" class="form-control" id="titleInput" placeholder="Add title here">
       <label for="floatingInput">Task Title</label>
     </div>
     <div class="form-floating mt-2">
@@ -217,39 +217,6 @@
 
     const themeButton = document.getElementById('themeButton');
     themeButton.addEventListener('click', toggleTheme);
-  </script>
-
-  <!-- Content Protection Script -->
-  <script>
-    // Disable right-click context menu
-    document.addEventListener('contextmenu', function (event) {
-      event.preventDefault();
-    });
-
-    // Disable text selection
-    document.addEventListener('selectstart', function (event) {
-      event.preventDefault();
-    });
-
-    // Disable copy/paste shortcuts
-    document.addEventListener('copy', function (event) {
-      event.preventDefault();
-    });
-    document.addEventListener('cut', function (event) {
-      event.preventDefault();
-    });
-    document.addEventListener('paste', function (event) {
-      event.preventDefault();
-    });
-
-    // Disable keyboard shortcuts to open developer tools
-    document.addEventListener('keydown', function (event) {
-      // Check if Ctrl+Shift+I, Ctrl+Shift+J (Cmd+Option+I, Cmd+Option+J on Mac) or F12 is pressed
-      if ((event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J')) ||
-        (event.key === 'F12')) {
-        event.preventDefault();
-      }
-    });
   </script>
 
   <!-- Inline JavaScript For Modal Pop-Up -->
